@@ -1,4 +1,6 @@
 <?php
+
+
 //define('CURLOPT_SSL_VERIFYPEER', 0);
 require 'autoload.php';
 use Parse\ParseQuery;
@@ -9,14 +11,14 @@ use Parse\ParseObject;
 
 
 
-//$app_id='7u1DSFl77TQj9xpMuZDLOOvWmMVyYZ4YJUSaHKCR'; //app-id-here
-//$rest_key='StWYkOuR0U38Tl2d502Zrx3GMB2lWlaq9ax7wQ8N'; //rest-api-key-here
-//$master_key='t4ycQncgu2S7RuWIkk0FTLpkXy6aD1DytlunzY0M'; //master-key-here
+$app_id='7u1DSFl77TQj9xpMuZDLOOvWmMVyYZ4YJUSaHKCR'; //app-id-here
+$rest_key='StWYkOuR0U38Tl2d502Zrx3GMB2lWlaq9ax7wQ8N'; //rest-api-key-here
+$master_key='t4ycQncgu2S7RuWIkk0FTLpkXy6aD1DytlunzY0M'; //master-key-here
 
-$app_id='w8djNACRhf3r7tT0jAFlOHh4vOhXU63MoB7fkpek'; //app-id-here
+/* $app_id='w8djNACRhf3r7tT0jAFlOHh4vOhXU63MoB7fkpek'; //app-id-here
 $rest_key='ielzug7I6w8xnKQQsaSXtrc7J4Wq7Iwja71nZ3jn'; //rest-api-key-here
 $master_key='bunsAi2eXd3dXjrQUx2ztPMcWkUttHGUfURTJBEn'; //master-key-here
-
+ */
 ParseClient::initialize($app_id, $rest_key, $master_key);
 /* $data = array("alert" => "Hi!");
 
@@ -40,7 +42,7 @@ testPushToQuery($key,$value,$alert);
 	$query = ParseInstallation::query();
 	$query->equalTo($key, $value);
 	ParsePush::send(array(
-	'data' => array('alert' => $alert),
+	'data' => array('alert' => $alert,'title'=>'EMGS EMGS'),
 	'where' => $query
 	));
 }
